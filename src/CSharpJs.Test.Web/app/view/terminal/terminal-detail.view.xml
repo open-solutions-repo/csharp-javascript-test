@@ -1,0 +1,87 @@
+<mvc:View 
+xmlns:mvc="sap.ui.core.mvc" 
+controllerName="app.controller.terminal.terminal-detail" 
+xmlns="sap.m" 
+xmlns:l="sap.ui.layout"
+xmlns:semantic="sap.m.semantic"
+xmlns:f="sap.ui.layout.form"
+xmlns:uxap="sap.uxap"
+xmlns:core="sap.ui.core">
+    <Page showHeader="true" title="" showFooter="true" showNavButton="true" enableScrolling="true" navButtonPress="onNavBackPage">
+
+        <uxap:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="true" upperCaseAnchorBar="false">
+            <uxap:headerTitle>
+                <uxap:ObjectPageDynamicHeaderTitle>
+                    <uxap:heading>
+                        <Title text="Terminal nº {/docEntry}"/>
+                    </uxap:heading>
+                    <uxap:actions>
+                        <uxap:ObjectPageHeaderActionButton icon="sap-icon://delete" type="Transparent" tooltip="{i18n>base.Tootip.Delete}" hideText="false" press="onDelete"/>
+                    </uxap:actions>
+                </uxap:ObjectPageDynamicHeaderTitle>
+            </uxap:headerTitle>
+
+            <uxap:sections>
+                <uxap:ObjectPageSection titleUppercase="false" title="">
+                    <uxap:subSections>
+                        <uxap:ObjectPageSubSection title="" mode="Expanded" titleUppercase="false">
+                            <uxap:blocks>
+                                <f:Form id="FormId" editable="true">
+                                    <f:layout>
+                                        <f:ResponsiveGridLayout
+                                            labelSpanXL="3"
+                                            labelSpanL="3"
+                                            labelSpanM="3"
+                                            labelSpanS="12"
+                                            adjustLabelSpan="false"
+                                            emptySpanXL="4"
+                                            emptySpanL="4"
+                                            emptySpanM="4"
+                                            emptySpanS="0"
+                                            columnsXL="1"
+                                            columnsL="1"
+                                            columnsM="1"
+                                            singleContainerFullSize="false" />
+                                    </f:layout>
+                                    <f:formContainers>
+                                        <f:FormContainer>
+                                            <f:formElements>
+
+                                                <f:FormElement label="{i18n>terminal.BPLId}">
+                                                    <f:fields>
+                                                        <Input 
+                                                            id="BPLId" 
+                                                            placeholder="Procurar"
+                                                            editable="false" 
+                                                            value="{/bplName}" />
+                                                    </f:fields>
+                                                </f:FormElement>
+
+                                                <f:FormElement label="{i18n>terminal.TerminalCode}">
+                                                    <f:fields>
+                                                        <Input 
+                                                            id="TerminalCode" 
+                                                            editable="false"
+                                                            value="{/u_OPEN_TerminalCode}" />
+                                                    </f:fields>
+                                                </f:FormElement>
+                                                
+                                            </f:formElements>
+                                        </f:FormContainer>
+                                    </f:formContainers>
+                                </f:Form>  
+                            </uxap:blocks>
+                        </uxap:ObjectPageSubSection>
+                    </uxap:subSections>
+                </uxap:ObjectPageSection>
+            </uxap:sections>
+        </uxap:ObjectPageLayout>
+        
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+			</OverflowToolbar>
+		</footer>
+
+    </Page>
+</mvc:View>

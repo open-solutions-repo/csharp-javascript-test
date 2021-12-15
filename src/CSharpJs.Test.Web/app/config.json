@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:9095",
+  "urlReport": "#{urlwebReport}",
+  "timeout": 1200000,
+  "debugMode": false,
+  "environmentDeveloper": "true",
+  "serverLicence": "http://sap-xnetweb.ddns.net:44399/api/license",
+  "companies": [
+    {
+      "code": "SBODEMOBR",
+      "name": "OEC Computers"
+    }
+  ],
+  "companyKey": "SBODEMOBR",
+  "application": {
+    "name": "CSharpTest",
+    "root": "open"
+  },
+  "pageTake": 10,
+  "tiles": []
+}

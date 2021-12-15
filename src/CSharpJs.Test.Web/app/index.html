@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+
+    <title>Store5</title>
+    <script
+      id="sap-ui-bootstrap"
+      src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+      data-sap-ui-libs="sap.m"
+      data-sap-ui-theme="sap_fiori_3"
+      data-sap-ui-compatVersion="edge"
+      data-sap-ui-preload="async"
+      data-sap-ui-resourceRoots='{"app": "./"}'
+      data-sap-ui-xx-bindingsyntax="complex"
+      
+    ></script>
+    <!--<link rel="shortcut  icon" href="/img/logo.png" />-->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--<link rel="shortcut  icon" href="./img/logo.png" />-->
+    <script>
+      sap.ui.getCore().attachInit(function() {
+        new sap.ui.core.ComponentContainer({
+          height: "100%",
+          name: "app"
+        }).placeAt("content");
+      });
+    </script>
+  </head>
+
+  <body class="sapUiBody" id="content"></body>
+</html>

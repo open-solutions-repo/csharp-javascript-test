@@ -1,0 +1,21 @@
+﻿[
+  {
+    "key": "SBODEMOBR",
+    "Encrypted": false,
+    "database": {
+      "server": "sap-xnetweb.ddns.net,10433",
+      "user": "sa",
+      "password": "Open@Adm19",
+      "trusted": false,
+      "version": "dst_MSSQL2016",
+      "company": "SBODemoBR",
+      "provider": "System.Data.SqlClient"
+    },
+    "businessOne": {
+      "Method": 1,
+      "SlAddress": "https://sap-xnetweb.ddns.net:50000",
+      "user": "manager",
+      "password": "b1admin"
+    }
+  }
+]

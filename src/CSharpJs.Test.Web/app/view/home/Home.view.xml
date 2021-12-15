@@ -1,0 +1,65 @@
+<mvc:View 
+xmlns:mvc="sap.ui.core.mvc" 
+controllerName="app.controller.home.Home" 
+xmlns:uxap="sap.uxap"
+xmlns="sap.m" 
+xmlns:tnt="sap.tnt"
+xmlns:c="sap.ui.core" 
+xmlns:layout="sap.ui.commons.layout">
+    <Page showHeader="false" title="" showFooter="true" showNavButton="false" enableScrolling="false">
+        
+        <tnt:ToolHeader>
+            <ToolbarSpacer/>
+            <MenuButton 
+                text="{/username}"
+                icon="sap-icon://person-placeholder"
+                defaultAction="onDefaultAction" 
+                useDefaultActionOnly="true" 
+                menuPosition="EndBottom">
+                <menu>
+                    <Menu>
+                        <MenuItem text="{/company}" icon="sap-icon://factory" />
+                        <MenuItem text="{i18n>home.Btn.Logout}" icon="sap-icon://log" press="onLogout"/>
+                    </Menu>
+                </menu>
+		    </MenuButton>
+		</tnt:ToolHeader>
+
+        <uxap:ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="false">
+            <uxap:sections>
+
+              <uxap:ObjectPageSection titleUppercase="false" title="{i18n>home.Tile.MasterData}">
+                    <uxap:subSections>
+                        <uxap:ObjectPageSubSection titleUppercase="false">
+                            <layout:HorizontalLayout allowWrapping="true">
+
+                              <GenericTile 
+                                    id="Terminal" 
+                                    header="{i18n>home.Tile.Terminal}" 
+                                    state="{/terminalState}"
+                                    frameType="OneByOne" 
+                                    class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+                                    press="pressTile">
+                                    <tileContent>
+                                        <TileContent>
+                                            <content>
+                                                <NumericContent value="{/terminalCount}" withMargin="false" icon="sap-icon://tree"/>
+                                            </content>
+                                        </TileContent>
+                                    </tileContent>
+                                        <customData>
+                                            <c:CustomData key="router" value="onGetRouter"/>
+                                            <c:CustomData key="ref" value="terminal-list"/>
+                                        </customData>
+                                </GenericTile>
+
+                            </layout:HorizontalLayout>
+                        </uxap:ObjectPageSubSection>
+                    </uxap:subSections>
+                </uxap:ObjectPageSection>
+
+            </uxap:sections>
+	    </uxap:ObjectPageLayout>
+
+    </Page>
+</mvc:View>
