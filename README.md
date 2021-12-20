@@ -1,6 +1,6 @@
 # C# + Javascript Test
 
-## Sobre
+## Sobre o repositório
 
 Este repositório contém um projeto simples para validação de conhecimento em C# e Javascript (usando [OpenUi5](https://github.com/SAP/openui5))
 
