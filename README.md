@@ -12,9 +12,9 @@ Este repositório contém um projeto simples para validação de conhecimento em
 
 ### Atividades
 
-1. Existe um problema na autenticação (e não é um problema de sintaxe). Identificar o problema e corrigir.
-2. Incluir um campo novo na tela de cadastro de terminal, nome Apelido.
-3. Baseado na modelagem DDD (Domain-Driven Design), indique uma ou mais melhorias possíveis no projeto Api (não precisa implementar).
+1. Existe um problema na autenticação do portal (e não é um problema de sintaxe). Identificar o problema e corrigir. (API)
+2. Incluir um campo novo na tela de cadastro de terminal, nome Apelido. (Client)
+3. Baseado na modelagem DDD (Domain-Driven Design), indique uma ou mais melhorias possíveis no projeto Api (não precisa implementar). (API)
 
 ### *The goal*
 
